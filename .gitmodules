@@ -1,0 +1,3 @@
+[submodule "vendor/taffybar"]
+	path = vendor/taffybar
+	url = git://git.devalot.com/taffybar.git
