@@ -1,9 +1,9 @@
-{- This file is part of the xmonadrc package. It is subject to the
+{- This file is part of the taffybarrc package. It is subject to the
 license terms in the LICENSE file found in the top-level directory of
-this distribution and at git://pmade.com/xmonadrc/LICENSE. No part of
-the xmonadrc package, including this file, may be copied, modified,
-propagated, or distributed except according to the terms contained in
-the LICENSE file. -}
+this distribution and at git://pmade.com/taffybarrc/LICENSE. No part
+of the taffybarrc package, including this file, may be copied,
+modified, propagated, or distributed except according to the terms
+contained in the LICENSE file. -}
 
 --------------------------------------------------------------------------------
 -- | Custom pager configuration for Taffybar.
@@ -18,7 +18,7 @@ import System.Taffybar.Pager
 --------------------------------------------------------------------------------
 -- | Per-host pager configuration.
 pagerConfig :: Int -> PagerConfig
-pagerConfig maxWidth = PagerConfig
+pagerConfig maxWidth = defaultPagerConfig
   { activeLayout     = escape
   , activeWindow     = colorize "#839496" "" . escape . shorten maxWidth
   , activeWorkspace  = colorize "#88b324" "" . wrap "[" "]" . escape
