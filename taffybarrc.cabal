@@ -1,0 +1,33 @@
+------------------------------------------------------------------------------
+name:          taffybarrc
+version:       17.4.17.0
+synopsis:      Peter's Taffybar Configuration
+homepage:      https://github.com/pjones/taffybarrc
+license:       BSD3
+license-file:  LICENSE
+author:        Peter Jones <pjones@devalot.com>
+maintainer:    Peter Jones <pjones@devalot.com>
+copyright:     Copyright (c) 2013-2017 Peter J. Jones
+category:      Graphics
+build-type:    Simple
+cabal-version: >=1.8
+
+------------------------------------------------------------------------------
+library
+  exposed-modules:
+    Taffybar.Local.Host
+    Taffybar.Local.MPRIS
+    Taffybar.Local.Pager
+    Taffybar.Local.Widgets
+
+  hs-source-dirs: src
+  ghc-options: -Wall -Werror
+
+  build-depends: base           >= 4.0    && < 5.0
+               , taffybar       >= 0.4.6  && < 0.5
+
+------------------------------------------------------------------------------
+executable taffybarrc
+  main-is: taffybarrc.hs
+  ghc-options: -Wall -Werror -threaded -rtsopts
+  build-depends: base, taffybar
