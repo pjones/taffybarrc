@@ -32,8 +32,8 @@ getHostConfig :: IO Host
 getHostConfig = do
   name <- getHostName
   return $ case name of
-    "holmwood" -> hostHolmwood
-    _          -> hostDefault
+    "slugworth" -> hostSlugworth
+    _           -> hostDefault
 
 --------------------------------------------------------------------------------
 -- | Default configuration (for my desktop).
@@ -41,14 +41,14 @@ hostDefault :: Host
 hostDefault =  Host
   { primaryMonitorNum = 1
   , leftWidgets       = [pager (pagerConfig 50)]
-  , rightWidgets      = [tray, clock]
+  , rightWidgets      = [clock, tray]
   }
 
 --------------------------------------------------------------------------------
 -- | My primary laptop.
-hostHolmwood :: Host
-hostHolmwood =  Host
+hostSlugworth :: Host
+hostSlugworth =  Host
   { primaryMonitorNum = 0
   , leftWidgets       = [pager (pagerConfig 40)]
-  , rightWidgets      = [tray, clock, battery]
+  , rightWidgets      = [clock, battery, tray]
   }
